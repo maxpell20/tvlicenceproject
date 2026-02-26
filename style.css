@@ -1,0 +1,175 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #f8fafc;
+  color: #111827;
+  line-height: 1.65;
+}
+
+.service-header {
+  background: #1d2a5b;
+  padding: 20px 0;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.08);
+}
+
+.wrapper {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.service-name {
+  font-weight: 600;
+  font-size: 18px;
+  color: white;
+}
+
+.main-content {
+  padding: 48px 0 60px 0;
+}
+
+h1 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.lead {
+  font-size: 17px;
+  color: #475569;
+  margin-bottom: 28px;
+}
+
+.notice {
+  background: #eef2ff;
+  border-left: 5px solid #1d2a5b;
+  padding: 18px 20px;
+  border-radius: 8px;
+  margin-bottom: 40px;
+  font-size: 14px;
+}
+
+.question-block {
+  padding: 24px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.question-block h2 {
+  font-size: 18px;
+  margin-bottom: 14px;
+}
+
+.button-group {
+  display: flex;
+  gap: 14px;
+  max-width: 340px;
+}
+
+button {
+  flex: 1;
+  padding: 14px 16px;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 8px;
+  border: 2px solid #1d2a5b;
+  background: white;
+  color: #1d2a5b;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+button:hover {
+  background: #eef2ff;
+  transform: translateY(-1px);
+}
+
+button.yes.selected {
+  background: #1d2a5b;
+  color: white;
+}
+
+button.no.selected {
+  background: #374151;
+  border-color: #374151;
+  color: white;
+}
+
+button:focus-visible {
+  outline: 3px solid #2563eb;
+  outline-offset: 2px;
+}
+
+.result {
+  margin-top: 40px;
+  padding: 28px;
+  border-left: 8px solid;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.result.required {
+  border-color: #b45309;
+  background: #fff7ed;
+  color: #7c2d12;
+}
+
+.result.not-required {
+  border-color: #15803d;
+  background: #f0fdf4;
+  color: #14532d;
+}
+
+.result-actions {
+  margin-top: 28px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.restart {
+  padding: 14px 18px;
+  font-size: 14px;
+  font-weight: 600;
+  background: #111827;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.15s ease;
+}
+
+.restart:hover {
+  background: #0b1220;
+}
+
+.share-link {
+  background: none;
+  border: none;
+  color: #2563eb;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.share-link:hover {
+  text-decoration: underline;
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  h1 { font-size: 26px; }
+  .button-group { flex-direction: column; max-width: 100%; }
+}

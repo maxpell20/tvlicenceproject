@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>TV Licence Calculator UK | Do I Need a TV Licence?</title>
+  <meta name="description" content="Free UK TV Licence Calculator. Instantly check if you legally need a TV Licence for live TV, BBC iPlayer or S4C.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://tvlicencecalculator.co.uk/">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/favicon.png">
+  <link rel="apple-touch-icon" href="/favicon.png">
+  <meta name="theme-color" content="#1d2a5b">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="TV Licence Calculator UK">
+  <meta property="og:description" content="Check instantly if you need a TV Licence in the UK.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://tvlicencecalculator.co.uk/">
+  <meta property="og:image" content="https://tvlicencecalculator.co.uk/favicon.png">
+  <meta property="og:locale" content="en_GB">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="TV Licence Calculator UK">
+  <meta name="twitter:description" content="Free UK TV Licence Calculator.">
+  <meta name="twitter:image" content="https://tvlicencecalculator.co.uk/favicon.png">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "TV Licence Calculator",
+    "url": "https://tvlicencecalculator.co.uk/",
+    "applicationCategory": "FinanceApplication",
+    "operatingSystem": "All",
+    "description": "A free UK TV Licence Calculator to check whether you are legally required to have a TV Licence."
+  }
+  </script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="service-header">
+  <div class="wrapper header-inner">
+    <span class="service-name">TV Licence Calculator</span>
+  </div>
+</header>
+
+<main class="wrapper main-content">
+
+  <h1>TV Licence Calculator UK</h1>
+
+  <p class="lead">
+    Check whether you are legally required to have a TV Licence based on your viewing activity.
+  </p>
+
+  <div class="notice">
+    <strong>Important:</strong>
+    This calculator provides general guidance based on current UK TV Licensing rules.
+    It does not replace official legal advice.
+  </div>
+
+  <section id="questions" class="form-section">
+
+    <div class="question-block">
+      <h2>Do you watch or record live TV?</h2>
+      <div class="button-group">
+        <button class="yes" onclick="setAnswer(1,true)" id="q1-yes">Yes</button>
+        <button class="no" onclick="setAnswer(1,false)" id="q1-no">No</button>
+      </div>
+    </div>
+
+    <div class="question-block">
+      <h2>Do you watch BBC iPlayer content (other than S4C only)?</h2>
+      <div class="button-group">
+        <button class="yes" onclick="setAnswer(2,true)" id="q2-yes">Yes</button>
+        <button class="no" onclick="setAnswer(2,false)" id="q2-no">No</button>
+      </div>
+    </div>
+
+    <div class="question-block">
+      <h2>Do you only watch S4C on-demand content?</h2>
+      <div class="button-group">
+        <button class="yes" onclick="setAnswer(3,true)" id="q3-yes">Yes</button>
+        <button class="no" onclick="setAnswer(3,false)" id="q3-no">No</button>
+      </div>
+    </div>
+
+  </section>
+
+  <section id="result" class="result hidden" aria-live="polite"></section>
+
+  <div id="result-actions" class="result-actions hidden">
+    <button id="restart" class="restart" onclick="restart()">
+      Change answers
+    </button>
+
+    <button class="share-link" onclick="sharePage()">
+      <span class="share-icon">↗</span>
+      Share
+    </button>
+  </div>
+
+</main>
+
+<script src="script.js"></script>
+
+</body>
+</html>

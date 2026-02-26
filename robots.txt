@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tvlicencecalculator.co.uk/sitemap.xml
