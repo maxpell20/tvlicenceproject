@@ -11,6 +11,7 @@ body {
   line-height: 1.65;
 }
 
+/* Header */
 .service-header {
   background: #1d2a5b;
   padding: 20px 0;
@@ -20,7 +21,7 @@ body {
 .wrapper {
   max-width: 760px;
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 28px; /* Increased base padding */
 }
 
 .service-name {
@@ -29,39 +30,44 @@ body {
   color: white;
 }
 
+/* Main Content */
 .main-content {
-  padding: 48px 0 60px 0;
+  padding-top: 48px;
+  padding-bottom: 72px;
 }
 
 h1 {
   font-size: 32px;
   font-weight: 700;
-  margin-bottom: 16px;
+  margin-bottom: 18px;
 }
 
 .lead {
   font-size: 17px;
   color: #475569;
-  margin-bottom: 28px;
+  margin-bottom: 32px;
+  max-width: 600px;
 }
 
+/* Notice */
 .notice {
   background: #eef2ff;
   border-left: 5px solid #1d2a5b;
-  padding: 18px 20px;
-  border-radius: 8px;
-  margin-bottom: 40px;
+  padding: 20px 22px;
+  border-radius: 10px;
+  margin-bottom: 44px;
   font-size: 14px;
 }
 
+/* Questions */
 .question-block {
-  padding: 24px 0;
+  padding: 28px 0;
   border-bottom: 1px solid #e5e7eb;
 }
 
 .question-block h2 {
   font-size: 18px;
-  margin-bottom: 14px;
+  margin-bottom: 16px;
 }
 
 .button-group {
@@ -70,12 +76,13 @@ h1 {
   max-width: 340px;
 }
 
+/* Buttons */
 button {
   flex: 1;
-  padding: 14px 16px;
+  padding: 16px 18px;
   font-size: 15px;
   font-weight: 600;
-  border-radius: 8px;
+  border-radius: 10px;
   border: 2px solid #1d2a5b;
   background: white;
   color: #1d2a5b;
@@ -104,11 +111,12 @@ button:focus-visible {
   outline-offset: 2px;
 }
 
+/* Result */
 .result {
-  margin-top: 40px;
-  padding: 28px;
+  margin-top: 44px;
+  padding: 32px;
   border-left: 8px solid;
-  border-radius: 10px;
+  border-radius: 12px;
   font-size: 20px;
   font-weight: 600;
 }
@@ -125,24 +133,24 @@ button:focus-visible {
   color: #14532d;
 }
 
+/* Result Actions */
 .result-actions {
-  margin-top: 28px;
+  margin-top: 32px;
   display: flex;
-  gap: 20px;
+  gap: 24px;
   align-items: center;
   flex-wrap: wrap;
 }
 
 .restart {
-  padding: 14px 18px;
+  padding: 14px 20px;
   font-size: 14px;
   font-weight: 600;
   background: #111827;
   color: white;
   border: none;
-  border-radius: 8px;
+  border-radius: 10px;
   cursor: pointer;
-  transition: 0.15s ease;
 }
 
 .restart:hover {
@@ -156,9 +164,6 @@ button:focus-visible {
   font-size: 14px;
   font-weight: 600;
   cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 6px;
 }
 
 .share-link:hover {
@@ -169,7 +174,47 @@ button:focus-visible {
   display: none;
 }
 
+/* -------------------- */
+/* 📱 MOBILE OPTIMISATION */
+/* -------------------- */
+
 @media (max-width: 600px) {
-  h1 { font-size: 26px; }
-  .button-group { flex-direction: column; max-width: 100%; }
+
+  .wrapper {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+
+  h1 {
+    font-size: 26px;
+  }
+
+  .lead {
+    font-size: 16px;
+  }
+
+  .button-group {
+    flex-direction: column;
+    max-width: 100%;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  .result {
+    font-size: 18px;
+    padding: 24px;
+  }
+
+  .result-actions {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .restart {
+    width: 100%;
+  }
+
 }
